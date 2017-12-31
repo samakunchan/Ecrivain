@@ -1,0 +1,358 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+ blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*-----------------------------------------------*/
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+}
+/*-----------------------------------------------*/
+body{
+    background-image: url("../src/images/photo_3.jpg");
+}
+.titre{
+    padding: 300px;
+}
+.titre div {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    text-align: center;
+}
+.titre div h2{
+    font-size: 40px;
+}
+.titre button {
+    background-color: bisque;
+    width: 40%;
+}
+.accueil a{
+    color: #2aabd2;
+}
+
+.articles .texte, .bio{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.articles p{
+    font-size: 20px;
+}
+.articles p span{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+table{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+td{
+    padding: 15px;
+    box-shadow: 1px 1px 1px black;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    line-height: 100px;
+}
+.footer{
+    margin-right: 0;
+}
+h1{
+    font-size: 60px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+h2{
+    font-size: 30px;
+    margin-left: 15px;
+    font-weight: bold;
+}
+h2 span{
+    font-size: 15px;
+}
+input{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover{
+    text-decoration: none;
+    color: blue;
+}
+td:hover{
+    background-color: #8bc5ab;
+}
+section{
+    margin-right: 0;
+    margin-bottom: 50px;
+}
+span{
+    font-weight: bold;
+}
+button{
+    padding: 20px;
+    width: 100%;
+}
+
+article{
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 80px;
+}
+#formConnection, #formInscription{
+    font-size: 30px;
+}
+.navbar-inverse{
+    background-color: #48639c;
+    border-color: #48639c;
+
+}
+.navbar-inverse .navbar-nav > li > a{
+    color: white;
+}
+.navbar-inverse .navbar-nav > li > .log{
+    color: green;
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+    color: #9d9d9d;
+}
+.navbar-inverse .navbar-brand{
+    color: white;
+}
+.navbar-inverse .navbar-brand:hover{
+    color: #9d9d9d;
+}
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+    background-color: grey ;
+}
+.navbar{
+    margin-bottom: 0;
+}
+
+.col-md-4,.col-md-1, .col-sm-6, .col-xs-6,.col-xs-4{
+    line-height: 80px;
+    color: white;
+    font-size: 20px;
+}
+.active{
+    color: yellow;
+}
+.site{
+    background-color: #cbe896;
+    line-height: 50px;
+    font-size: 30px;
+}
+.subco{
+    background-color: #8bc5ab;
+    line-height: 50px;
+    font-size: 30px;
+}
+
+.subco p{
+    margin: 0;
+}
+
+.fa-sign-out{
+    font-size: 20px;
+}
+.admin{
+    margin-top: 20px;
+    margin-right: 0;
+}
+
+.admin button{
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.6);
+}
+.admin button:hover{
+    background-color: rgba(200, 200, 200, 0.6);
+}
+.write{
+    margin-right: 0;
+    margin-left: 0;
+}
+#sectionAdmin li span{
+    margin-left: 16px;
+}
+.commentaires{
+    background-color: grey;
+}
+.comment{
+    background-color: rgb(255, 255, 255) ;
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.6);
+    margin: 1px;
+    padding: 5px;
+}
+.extrait{
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.6);
+    margin: 15px;
+}
+.tb, .deco{
+    line-height: 50px;
+    font-size: 25px;
+    background-color: rgba(50,147,111, 0.6) ;
+}
+.chap p{
+    font-size: 20px;
+    padding: 5px;
+}
+ol{
+    padding-left: 10px;
+}
+.comodif{
+    margin-top: 20px;
+}
+.tdart, .tdcreate{
+    text-align: center;
+}
+
+.chapitres td{
+    padding: 0;
+}
+.chapitres td:hover{
+    background-color: transparent;
+}
+.pagination{
+    background-color: grey;
+}
+
+.pagination span{
+    text-align: center;
+    padding: 10px;
+}
+form p, .nope{
+    padding: 10px;
+    margin: 10px;
+}
+.commentaires form{
+    margin: 10px;
+}#sectionAdmin .bord{
+    background-color: grey;
+    padding: 10px;
+}
+.panneau{
+    background-color: white;
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.6);
+    margin: 1px;
+    padding: 10px;
+}
+.log{
+    color: green;
+    background-color: white;
+    border-radius: 25px ;
+    padding: 10px;
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.6);
+}
+.log a:hover{
+    background-color: transparent;
+}
+.user, .regle{
+    background-color: rgba(255, 255, 255, 0.6) ;
+    padding: 20px;
+    margin: 20px;
+}
+.user span, .comment span, .bord span, .traitement span, .traitement span, .profil span{
+    padding: 5px;
+    margin: 20px;
+    width: inherit;
+    border-radius: 3px;
+    background-color: rgb(114,102,86);
+    color: white;
+    box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.6);
+}
+.bienvenu{
+    font-size: 25px;
+    background-color: rgba(255, 255, 255, 0.6) ;
+    padding: 12px;
+}
+.regle li{
+    padding: 10px;
+}
+form button{
+    background-color: white;
+}
+form label{
+    padding: 5px;
+    margin: 2px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+form input{
+    margin: 2px;
+}
+.profil{
+    padding: 15px;
+}
+.last p{
+    font-size: 30px;
+    margin-top: 20px;
+}
+.last h1{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.date{
+    font-size: 20px;
+}
+.introuvable{
+    font-size: 80px;
+}
+.panneau .col-md-3{
+    padding-right: 0px;
+}
