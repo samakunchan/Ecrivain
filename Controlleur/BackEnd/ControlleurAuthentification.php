@@ -37,25 +37,25 @@ class ControlleurAuthentification
      */
     public function login($pseudo, $password)
     {
-    if (isset($pseudo) && isset($password)){
-        $users = $this->manager->read($pseudo);
-        if($users){
-            if ($users->getPassword()=== sha1($password)){
-                session_start();
-                $_SESSION['pseudo']= $users->getPseudo();
-                $_SESSION['email']= $users->getEmail();
-                if($users->getPseudo()=== 'admin'){
-                    Routeur::redirection('admin&action=tb&id='.$users->getId().'&p=1');
-                }elseif ($users->getPseudo()!== 'admin'){
-                    Routeur::redirection('users');
+        if (isset($pseudo) && isset($password)){
+            $users = $this->manager->read($pseudo);
+            if($users){
+                if ($users->getPassword()=== sha1($password)){
+                    session_start();
+                    $_SESSION['pseudo']= $users->getPseudo();
+                    $_SESSION['email']= $users->getEmail();
+                    if($users->getPseudo()=== 'admin'){
+                        Routeur::redirection('admin&action=tb&id='.$users->getId().'&p=1');
+                    }elseif ($users->getPseudo()!== 'admin'){
+                        Routeur::redirection('users');
+                    }
+                    return true;
+                }else{
+                    ControlleurError::identifiantIncorrect();
+                    return false;
                 }
-                return true;
-            }else{
-                ControlleurError::identifiantIncorrect();
-                return false;
             }
         }
-    }
     }
 
     /**
@@ -98,6 +98,6 @@ class ControlleurAuthentification
                     }
                 }
             }
-            }
+        }
     }
 }

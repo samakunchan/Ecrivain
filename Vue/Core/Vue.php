@@ -14,7 +14,7 @@ namespace Vue\Core;
 class Vue
 {
     private $fichier;
-    private $gabarit;
+    private $gabarit1;
 
     /**
      * Constructeur qui instancie le chemin de chaque page
@@ -24,7 +24,7 @@ class Vue
     public function __construct($page)
     {
         $this->fichier = '../Vue/Pages/'. $page .'.php';
-        $this->gabarit = '../Vue/Gabarit/gabarit.php';
+        $this->gabarit1 = '../Vue/Gabarit/template.php';
     }
 
     /**
@@ -40,7 +40,7 @@ class Vue
                 extract($donnees);
                 require $this->fichier;
                 $contenu = ob_get_clean();
-                require $this->gabarit;
+                require $this->gabarit1;
             }else{
                 echo 'Fichier ' . $this->fichier . ' introuvable';
             }
@@ -49,7 +49,7 @@ class Vue
             require $this->fichier;
             $donnees= '';
             $contenu = ob_get_clean();
-            require $this->gabarit;
+            require $this->gabarit1;
         }
     }
 

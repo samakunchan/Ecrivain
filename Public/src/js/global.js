@@ -13,9 +13,9 @@ $(document).ready(function () {
         menubar: false,
         image_caption: true,
         image_advtab: true,
-        external_filemanager_path: "/Blog_de_JFR/Public/src/filemanager/",
+        external_filemanager_path: "/Ecrivain/Public/src/filemanager/",
         filemanager_title: "MyPHPnotes",
-        external_plugins: { "filemanager":"/Blog_de_JFR/Public/src/filemanager/plugin.min.js" },
+        external_plugins: { "filemanager":"/Ecrivain/Public/src/filemanager/plugin.min.js" },
         visualblocks_default_state: true,
         style_formats_autohide: true,
         style_formats_merge: true

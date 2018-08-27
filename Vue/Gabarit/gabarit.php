@@ -1,4 +1,6 @@
 <?php if ($_SESSION){
+    setcookie($_SESSION['pseudo'], 'online', time()+60, null, null, false, true);
+    var_dump(time());
     $log = '
 <li><a class="log"><span class="glyphicon glyphicon-user"></span> '.ucfirst($_SESSION['pseudo']).'</a></li>
 <li><a href="index.php?page=deco" title="Déconnection"><span class="glyphicon glyphicon-log-out"></span></a></li>

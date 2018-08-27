@@ -112,6 +112,7 @@ class Routeur
             $this->profil->gestionDonnees();
         }elseif ($pages=== 'deco'){
             session_start();
+            setcookie($_SESSION['pseudo'], 'online', time()-3600, null, null, false, true);
             session_destroy();
             Routeur::redirection('accueil');
         }else{
