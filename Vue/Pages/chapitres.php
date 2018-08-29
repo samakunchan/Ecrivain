@@ -8,7 +8,6 @@ ControlleurAuthentification::controlSession();
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
         <table id="liste" class="table table-hover col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
             <thead>
             <tr>
                 <th scope="col">Titre</th>

@@ -197,7 +197,6 @@ class ControlleurCommentaires
         $res = self::$managerCom->getTotalSigalement();
         if ($res[0]->getnbCom()!=='0'){
             echo $res[0]->getnbCom();
-            echo '<span><a href="#signal">Voir</a></span>';
             return null;
         }else{
             return $res[0]->getnbCom();

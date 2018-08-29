@@ -1,9 +1,6 @@
 <?php if ($_SESSION){
-    setcookie($_SESSION['pseudo'], 'online', time()+60, null, null, false, true);
-    var_dump(time());
     $log = '
-<li><a class="log"><span class="glyphicon glyphicon-user"></span> '.ucfirst($_SESSION['pseudo']).'</a></li>
-<li><a href="index.php?page=deco" title="Déconnection">Déconnection</a></li>
+<a class="nav-link" href="index.php?page=deco" title="Déconnection">Déconnection</a>
 ';
 }else{
     $log = '<a class="nav-link" href="index.php?page=form" title="S\'inscrire/Se connecter">Connection</a>';
@@ -22,12 +19,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="src/styles.css" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/responsive/tablet.css" rel="stylesheet">
+    <link href="css/responsive/mobile.css" rel="stylesheet">
 </head>
 
 <body>
-    <header class="masthead mb-auto">
-        <nav class="custom-header">
+<?php if (isset($_GET['page']) && !empty($_GET['page']) && $_GET['page'] ==="accueil"): ?>
+    <header class="header-home masthead mb-auto">
+            <nav class="headerParent">
             <div class="nav-menu p-3">
                 <nav class="nav nav-masthead justify-content-center">
                     <a class="nav-link active" href="index.php?page=accueil">Accueil</a>
@@ -39,9 +40,41 @@
             <h1>Billet simple pour l'alaska</h1>
         </nav>
     </header>
-    <div class="rail">
-        <img class="homme" src="src/images/homme.png" alt="Homme">
-    </div>
+    <?php elseif (isset($_GET['page']) && !empty($_GET['page']) && $_GET['page'] ==="admin"): ?>
+    <header class="header-other masthead mb-auto">
+        <nav class="headerParent">
+            <div class="nav-menu p-3">
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="index.php?page=accueil">Accueil</a>
+                    <a class="nav-link" href="index.php?page=chapitres&p=1">Chapitres</a>
+                    <?= $log; ?>
+                </nav>
+            </div>
+            <div class="filtre-admin"></div>
+            <img class="paysage" src="src/images/ordi.jpg" alt="ordi">
+        </nav>
+    </header>
+
+    <?php else: ?>
+    <header class="header-other masthead mb-auto">
+        <nav class="headerParent">
+            <div class="nav-menu p-3">
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="index.php?page=accueil">Accueil</a>
+                    <a class="nav-link" href="index.php?page=chapitres&p=1">Chapitres</a>
+                    <?= $log; ?>
+                </nav>
+            </div>
+            <div class="filtre"></div>
+            <img class="paysage" src="src/images/paysage.jpg" alt="paysage">
+        </nav>
+    </header>
+<?php endif ?>
+    <?php if (isset($_GET['page']) && !empty($_GET['page']) && $_GET['page'] ==="accueil") :?>
+        <div class="rail">
+            <img class="homme" src="src/images/homme.png" alt="Homme">
+        </div>
+    <?php endif; ?>
     <main role="main" class="inner cover">
         <?= $contenu; ?>
     </main>

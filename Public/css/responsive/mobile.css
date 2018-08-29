@@ -1,0 +1,29 @@
+@media screen and (max-width: 425px){
+    .headerParent h1{
+        width: 100vw;
+        top: 60vh;
+        left: 10vw;
+    }
+    .description article{
+        width: 100vw;
+        margin-left: 0;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+}
+@media screen and (max-width: 375px){
+    .description article{
+        width: 100vw;
+    }
+
+}
+@media screen and (max-width: 320px){
+    .headerParent h1{
+        width: 100vw;
+        top: 60vh;
+        left: 10vw;
+        font-size: 20px;
+    }
+
+}

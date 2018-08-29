@@ -92,9 +92,9 @@ class ControlleurAuthentification
                 session_start();
                 if ($_SESSION){
                     if(isset($_SESSION['pseudo']) && $_SESSION['pseudo']==='admin'){
-                        echo '<p class="col-lg-3 tb"> <a href="index.php?page=admin&action=tb&p=1">Tableau de bord</a></p>';
+                        echo '<p class="btn btn-info"> <a href="index.php?page=admin&action=tb&p=1">Tableau de bord</a></p>';
                     }elseif (isset($_SESSION['pseudo']) && $_SESSION['pseudo']!=='admin'){
-                        echo '<p class="col-lg-3 tb"> <a href="index.php?page=users&action=tb">Tableau de bord</a></p>';
+                        echo '<p class="btn btn-info"> <a href="index.php?page=users&action=tb">Tableau de bord</a></p>';
                     }
                 }
             }

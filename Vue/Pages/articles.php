@@ -4,21 +4,22 @@ use Controlleur\BackEnd\ControlleurAuthentification;
 ControlleurAuthentification::controlSession();
 
 ?>
-<div class="row articles">
-    <div class="col-md-12 col-lg-12 texte">
-        <h2 class="col-md-offset-4 col-lg-offset-4">
+<div class="articles">
+    <div class="col-md-12 col-lg-12">
+        <h2 class="text-center">
             <?php echo $donnees[0]->getTitre(); ?><br>
-            <em class="date">Publié le : <?php echo $donnees[0]->getDateCreation()?></em>
+            <em class="mini-date text-center">Publié le : <?php echo $donnees[0]->getDateCreation()?></em>
         </h2>
-            <?php echo $donnees[0]->getContenu();?>
+        <?php echo $donnees[0]->getContenu();?>
     </div>
 </div>
 <hr>
-<div class="row commentaires ">
+<div class="commentaires">
     <div class="col-md-12 col-lg-12">
     <?php if ($donnees[1]): ?>
-        <?php foreach ($donnees[1] as $commentaire):;?>
-            <div class="comment row">
+        <?php foreach ($donnees[1] as $key=>$commentaire):;?>
+            <?php if ($key %2 == 0): ?>
+            <div class="comment row bg-comment-even p-3">
                 <p class="col-md-12 col-lg-12">
                     <strong>
                         Auteur : <?php echo $commentaire->getAuteur()?>
@@ -33,8 +34,27 @@ ControlleurAuthentification::controlSession();
                     ControlleurCommentaires::boutonSignale($commentaire->getId(),$commentaire->getSignaler());
                     ?>
                 </p>
-
+                <hr>
             </div>
+                <?php else: ?>
+                <div class="comment row bg-comment-odd p-3">
+                    <p class="col-md-12 col-lg-12">
+                        <strong>
+                            Auteur : <?php echo $commentaire->getAuteur()?>
+                        </strong>
+                    </p>
+
+                    <p class="col-md-12 col-lg-12"> <?php echo $commentaire->getContenu()?> <em>Date de publication : <?php echo $commentaire->getDateCreation()?></em></p>
+
+                    <p>
+                        <?php
+                        ControlleurCommentaires::gestionCommentaire($commentaire->getId());
+                        ControlleurCommentaires::boutonSignale($commentaire->getId(),$commentaire->getSignaler());
+                        ?>
+                    </p>
+                    <hr>
+                </div>
+            <?php endif ?>
         <?php endforeach; ?>
         <?php else: ?>
         <p class="nope">Il n'y a pas de commentaire pour cet article...</p>

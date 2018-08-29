@@ -12,7 +12,8 @@
 <section class="vers-chapitres">
     <article>
         <h2><a href="index.php?page=chapitres&p=1">Voir tout les chapitres</a></h2>
-        <img src="src/images/montagne.png" alt="montagne">
+        <img class="montagne" src="src/images/montagne.png" alt="montagne">
     </article>
+    <div class="slideshow"></div>
 </section>
-
+<script src="src/js/nuage.js"></script>

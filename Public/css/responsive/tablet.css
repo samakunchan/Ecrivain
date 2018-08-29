@@ -1,0 +1,44 @@
+/*Tout est bon pour le 980px*/
+
+@media screen and (max-width: 1024px){
+    .headerParent h1{
+        width: 50vw;
+        top: 70vh;
+    }
+    .ours1{
+        bottom: -125px;
+    }
+    .nav-masthead{
+        display: inline-block;
+    }
+    .nav-tabs .nav-link{
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (max-width: 980px){
+    .formulaire{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .headerParent h1{
+        width: 60vw;
+        top: 60vh;
+    }
+    .ours1{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    .headerParent h1{
+        width: 60vw;
+        top: 60vh;
+    }
+    .ours1{
+        display: none;
+    }
+
+}
